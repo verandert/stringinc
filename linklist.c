@@ -16,9 +16,9 @@
 // }
 
 //初始化单向链表
-void InitList(LinkList head)
+void InitList(LinkList *head)
 {
-    head->next = NULL;
+    (*head)->next = NULL;
 }
 //返回第i个链表节点,不存在则exit;
 elemtype GetElem(LinkList head, int i)
@@ -79,7 +79,7 @@ void append(LinkList head, elemtype data){
     {
         p = p->next;
     }
-    if(q = (LinkList)malloc(sizeof(LNode))) {
+    if((q = (LinkList)malloc(sizeof(LNode)))) {
         q->next = p->next;
         p->next = q;
         q->data = data;

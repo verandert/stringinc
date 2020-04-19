@@ -34,7 +34,7 @@ int MatchByKmp(HString S, HString T, int pos, int next[]);
 void GetNext(HString S, int next[]);
 
 //链表相关函数的声明
-void InitList(LinkList head);
+void InitList(LinkList *head);
 elemtype GetElem(LinkList head, int i);
 elemtype DeleteList(LinkList head, int i);
 void InsertList(LinkList head, int i, elemtype data);
