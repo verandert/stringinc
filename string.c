@@ -16,19 +16,19 @@ void Replace(HString *S, HString T, HString V, int next[]);
 int MatchByKmp(HString S, HString T, int pos, int next[]);
 void GetNext(HString S, int next[]);
 
-int main()
-{
-    HString S = {NULL, 0}, T = {NULL, 0}, V = {NULL, 0};
-    StrAssign(&S, "archlinux");
-    StrAssign(&T, "arch");
-    int next[T.length + 1];
-    printf("%d\n", MatchByKmp(S, T, 1, next));
-    StrAssign(&V, "manjaro");
-    Replace(&S, T, V, next);
-    printf("%s", S.base);
-    printf("\n");
-    return 0;
-}
+// int main()
+// {
+//     HString S = {NULL, 0}, T = {NULL, 0}, V = {NULL, 0};
+//     StrAssign(&S, "archlinux");
+//     StrAssign(&T, "arch");
+//     int next[T.length + 1];
+//     printf("%d\n", MatchByKmp(S, T, 1, next));
+//     StrAssign(&V, "manjaro");
+//     Replace(&S, T, V, next);
+//     printf("%s", S.base);
+//     printf("\n");
+//     return 0;
+// }
 
 //初始化一个串
 void StrAssign(HString *S, char *p)

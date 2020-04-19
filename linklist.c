@@ -1,18 +1,19 @@
-//#include "./datastructure.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "./idxlist.h"
 
-#define true 1
-#define false 0
-
-typedef int bool;
-//单链表数据定义
-typedef Event elemtype;
-typedef struct LNode
-{
-    elemtype data;
-    struct LNode *next;
-}LNode, *LinkList;
+// int main(){
+//     LNode L;
+//     LinkList p;
+//     InitList(&L);
+//     append(&L, 001);
+//     p = L.next;
+//     while (p)
+//     {
+//         printf("%d", p->data);
+//         p = p->next;
+//     }
+//     printf("\n");
+//     return 0;
+// }
 
 //初始化单向链表
 void InitList(LinkList head)
@@ -69,6 +70,23 @@ void InsertList(LinkList head, int i, elemtype data)
     q->next = p->next;
     p->next = q;
 }
+
+//链表尾部追加元素
+void append(LinkList head, elemtype data){
+    LinkList p, q;
+    p = head;
+    while (p->next)
+    {
+        p = p->next;
+    }
+    if(q = (LinkList)malloc(sizeof(LNode))) {
+        q->next = p->next;
+        p->next = q;
+        q->data = data;
+    }
+    else {printf("内存分配失败"); exit(-1);}
+}
+
 //融合两个非递减集合;
 /*void MergeList(LinkList head, LinkList head1)
 {
