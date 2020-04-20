@@ -3,4 +3,5 @@
 
  ```shell
 gcc -o idxlist idxlist.c string.c linklist.c
+./idxlist
  ```
